@@ -39,7 +39,7 @@
         "description": "User name for the backend Web servers"
       }
     },
-    "adminPassword": {
+    "adminPasswordOrKey": {
       "type": "securestring",
       "metadata": {
         "description": "Password for the backend Web servers"
@@ -88,8 +88,8 @@
           "adminUsername": {
             "value": "[parameters('adminUsername')]"
           },
-          "adminPassword": {
-            "value": "[parameters('adminPassword')]"
+          "adminPasswordOrKey": {
+            "value": "[parameters('adminPasswordOrKey')]"
           },
           "dnsNameForPublicIP": {
             "value": "[concat(variables('backendDnsPrefix'), uniqueString(reference(concat('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))).resourceGuid), '-1')]"
@@ -126,8 +126,8 @@
           "adminUsername": {
             "value": "[parameters('adminUsername')]"
           },
-          "adminPassword": {
-            "value": "[parameters('adminPassword')]"
+          "adminPasswordOrKey": {
+            "value": "[parameters('adminPasswordOrKey')]"
           },
           "dnsNameForPublicIP": {
             "value": "[concat(variables('backendDnsPrefix'), uniqueString(reference(concat('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))).resourceGuid), '-2')]"
