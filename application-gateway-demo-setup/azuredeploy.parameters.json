@@ -5,7 +5,7 @@
     "adminUsername": {
       "value": "wsadmin"
     },
-    "adminPassword": {
+    "adminPasswordOrKey": {
       "value": "GEN-PASSWORD"
     },
     "cookieBasedAffinity": {
